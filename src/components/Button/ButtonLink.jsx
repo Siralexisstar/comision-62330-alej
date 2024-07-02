@@ -1,4 +1,4 @@
-/**@jsxImportSource @emotion/react */
+/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
 const buttonStyle = css`
@@ -14,10 +14,10 @@ const buttonStyle = css`
   cursor: pointer;
 `;
 
-const ButtonLink = ({ href, text }) => {
+const ButtonLink = ({ href, children }) => {
   return (
     <a href={href} css={buttonStyle}>
-      {text}
+      {children}
     </a>
   );
 };
