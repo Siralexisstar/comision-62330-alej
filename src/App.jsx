@@ -1,19 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-import Navbar from './components/Navbar/Navbar';
-
-const buttonStyle = css`
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-`;
+import { css } from "@emotion/react";
+import Navbar from "./components/Navbar/Navbar";
+import ButtonLink from "./components/Button/ButtonLink";
 
 function App() {
   const title = "Primera aplicacion React";
@@ -27,7 +15,18 @@ function App() {
         <h2>Subtitulo: {subTitle}</h2>
       </div>
       <div>
-        <button css={buttonStyle}>Click me</button>
+        <ButtonLink
+          href={"https://www.youtube.com/watch?v=Lq9prEqKr7k"}
+          css={buttonStyle}
+        >
+          Hi voyager
+        </ButtonLink>
+        <ButtonLink
+          href={"https://www.youtube.com/watch?v=OgLQ_D9CHXE"}
+          css={buttonStyle}
+        >
+          Hello
+        </ButtonLink>
       </div>
     </>
   );

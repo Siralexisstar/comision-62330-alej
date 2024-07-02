@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <>
       <ul>
-        <Navitem />
+        <Navitem href = "https://www.google.com" text = "Google Home"/>
         <li>About</li>
         <li>Contact</li>
       </ul>
