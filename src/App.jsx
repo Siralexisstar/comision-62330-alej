@@ -1,22 +1,33 @@
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Navitem from "./components/Navitem/Navitem";
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+import Navbar from './components/Navbar/Navbar';
+
+const buttonStyle = css`
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+`;
 
 function App() {
-  //función que solo devuelve un h1
-
   const title = "Primera aplicacion React";
-  const subTitle = "Texto subtituloº";
+  const subTitle = "Texto subtitulo";
 
-  //accediendo al valor de la variables Jvs
-  //si devuevlo mas de un elemento se tiene que hacer con div
   return (
-    //esto me encierra todo en un elemento sin ponerle un elemento extra (un div)
     <>
       <Navbar />
       <div>
-        <h1>Titulo : {title}</h1>
-        <h2>Subtitulo : {subTitle}</h2>
+        <h1>Titulo: {title}</h1>
+        <h2>Subtitulo: {subTitle}</h2>
+      </div>
+      <div>
+        <button css={buttonStyle}>Click me</button>
       </div>
     </>
   );
