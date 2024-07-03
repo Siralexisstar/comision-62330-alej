@@ -2,14 +2,15 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import ButtonLink from "./components/Button/ButtonLink";
+import {categorias} from "./components/mock/MockData";
 
 function App() {
-  const title = "Primera aplicacion React";
+  const title = "Bienvenido al e-commerce de coches de alta gama";
   const subTitle = "Texto subtitulo";
 
   return (
     <>
-      <Navbar />
+      <Navbar categorias={categorias}/>
       <div>
         <h1>Titulo: {title}</h1>
         <h2>Subtitulo: {subTitle}</h2>

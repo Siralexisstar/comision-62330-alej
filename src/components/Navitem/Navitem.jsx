@@ -10,11 +10,12 @@ const linkStyle = css`
   }
 `;
 
-const Navitem = ({ href, text }) => {
+const Navitem = (props) => {
+  console.log(props);
   return (
-    <li>
-      <a href={href}>{text}</a>
-    </li>
+    <div>
+      <a href="#">{props.name}</a>
+    </div>
   );
 };
 export default Navitem;
