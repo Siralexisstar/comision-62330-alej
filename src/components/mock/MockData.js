@@ -1,5 +1,7 @@
 export const categorias = ["Normal", "Electrico", "Híbrido"];
 
+export const title = "Bienvenido al e-commerce de coches de alta gama";
+
 export const products = [
     {
       id: 1,
