@@ -1,0 +1,13 @@
+/* declaring some example styles */
+.navItems {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .navItem {
+    cursor: pointer;
+    text-decoration: none;
+  }
