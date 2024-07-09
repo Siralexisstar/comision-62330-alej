@@ -8,6 +8,7 @@ import { title, categorias } from "./components/mock/MockData";
 
 function App() {
   const subTitle = "Texto subtitulo";
+  
 
   return (
     <>
