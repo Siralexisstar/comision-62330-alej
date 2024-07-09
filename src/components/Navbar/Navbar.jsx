@@ -2,16 +2,17 @@
 import Navitem from "../Navitem/Navitem";
 import { categorias, title } from "../../components/mock/MockData";
 import CartWidget from "../CartWidget/CartWidget";
+import Sidebar from "../SideBar/SideBar";
 
 const Navbar = ({ categorias, title }) => {
   console.log(categorias);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">
+        <div>
+          <Sidebar />
+        </div>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -44,12 +45,6 @@ const Navbar = ({ categorias, title }) => {
           </div>
         </div>
       </nav>
-
-      {/* <div>
-        <a href="#">{categorias[0]} </a>
-        <a href="#">{categorias[1]} </a>
-        <a href="#">{categorias[2]} </a>
-      </div> */}
       <div>
         <CartWidget />
       </div>

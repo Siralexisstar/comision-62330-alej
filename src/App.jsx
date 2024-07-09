@@ -14,11 +14,11 @@ function App() {
       <Navbar categorias={categorias} />
       <ItemListContainer title={title} />
       <div>
-        <ButtonLink href="https://www.youtube.com/watch?v=Lq9prEqKr7k">
-          Hi voyager
+        <ButtonLink href="https://www.youtube.com/watch?v=MjLS5Zri7IM">
+          Candle Making video 1
         </ButtonLink>
-        <ButtonLink href="https://www.youtube.com/watch?v=OgLQ_D9CHXE">
-          Hello
+        <ButtonLink href="https://www.youtube.com/watch?v=SEiLNPbSBbc">
+          Candle Making video 2
         </ButtonLink>
       </div>
     </>
