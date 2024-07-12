@@ -8,12 +8,11 @@ import { title, categorias } from "./components/mock/MockData";
 
 function App() {
   const subTitle = "Texto subtitulo";
-  
 
   return (
     <>
-      <Navbar categorias={categorias} />
-      <ItemListContainer title={title} />
+      <Navbar categorias={categorias} title={title} />
+      <ItemListContainer />
       <div>
         <ButtonLink href="https://www.youtube.com/watch?v=MjLS5Zri7IM">
           Candle Making video 1

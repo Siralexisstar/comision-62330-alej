@@ -10,7 +10,7 @@ const ItemListContainer = ({ title }) => {
         <Col md={8}>
           <Card className="text-center shadow-sm">
             <Card.Body>
-              <Card.Title className="mb-4" style={{ fontSize: '2rem', color: '#007bff' }}>{title}</Card.Title>
+              {/* <Card.Title className="mb-4" style={{ fontSize: '2rem', color: '#007bff' }}>{title}</Card.Title> */}
               <ItemList />
               <ItemCount stock={10} initial={1} />
             </Card.Body>

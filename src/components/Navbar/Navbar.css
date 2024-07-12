@@ -1,13 +1,85 @@
-/* declaring some example styles */
-.navItems {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  .navItem {
-    cursor: pointer;
-    text-decoration: none;
-  }
+/* Navbar.css */
+.header {
+  background-color: #000000; /* Color de fondo para que coincida con el logo */
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons i {
+  margin-right: 15px;
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Ocupa el espacio restante */
+}
+
+.logo-img {
+  max-height: 150px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+.right-menu {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.right-menu span {
+  margin-left: 15px;
+  color: #fff;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #a3a2a1; /* Color ligeramente diferente para el menú de navegación */
+  flex: 1; /* Asegura que el navbar tome el espacio restante */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fff; /* Mantén el color blanco en el hover */
+  text-decoration: underline; /* Añade subrayado en el hover */
+}
+
+.btn-custom-gray {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  color: white !important;
+}
+
+.btn-custom-gray:hover {
+  background-color: #5a6268 !important;
+  border-color: #545b62 !important;
+}
