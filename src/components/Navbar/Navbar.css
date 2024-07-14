@@ -1,8 +1,10 @@
 /* Navbar.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
 
 .header {
-  background-color: #fcfcfc;
+  background-color: #fff;
   color: #fff;
   /* padding: 10px 20px; */
   display: flex;
@@ -24,13 +26,32 @@
 }
 
 .social-icons {
+  position: absolute;
+  top: 10px;
+  left: 20px;
   display: flex;
   align-items: center;
 }
 
-.social-icons i {
+.social-icon {
   margin-right: 15px;
-  color: #fff;
+  color: #000000;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon-facebook:hover {
+  color: #0033ff; /* Cambia al color que prefieras */
+  transform: scale(1.2); /* Agranda el ícono al pasar el ratón por encima */
+}
+
+.social-icon-youtube:hover {
+  color: #ee0a0a; /* Cambia al color que prefieras */
+  transform: scale(1.2); /* Agranda el ícono al pasar el ratón por encima */
+}
+
+.social-icon-instagram:hover {
+  color: #f60a78; /* Cambia al color que prefieras */
+  transform: scale(1.2); /* Agranda el ícono al pasar el ratón por encima */
 }
 
 .right-menu {
