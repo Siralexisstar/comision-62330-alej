@@ -2,6 +2,8 @@ export const categorias = ["Aromaticas", "Sin Arroma", "Personalizadas", "Especi
 
 export const title = "Bienvenido al e-commerce de velas";
 
+export const menu = ["INICIO", "TIENDA" ,"QUIENES SOMOS", "CONTACTO"];
+
 export const products = [
   {
     id: 1,

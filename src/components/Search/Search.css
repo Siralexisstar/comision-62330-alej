@@ -1,0 +1,17 @@
+.search-navbar {
+    justify-content: flex-end;
+  }
+  
+  .search-form {
+    width: auto;
+  }
+  
+  .search-input {
+    width: 150px; /* Ajusta el tamaño del input */
+    height: 30px; /* Ajusta la altura del input */
+  }
+  
+  .search-button {
+    height: 30px; /* Ajusta la altura del botón */
+  }
+  

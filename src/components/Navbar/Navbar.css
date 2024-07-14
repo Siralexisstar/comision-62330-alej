@@ -1,8 +1,12 @@
 /* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .header {
-  background-color: #000000; /* Color de fondo para que coincida con el logo */
+  background-color: #fcfcfc;
   color: #fff;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
+  display: flex;
+  flex-direction: column;
 }
 
 .top-bar {
@@ -10,6 +14,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .social-icons {
@@ -20,17 +31,6 @@
 .social-icons i {
   margin-right: 15px;
   color: #fff;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1; /* Ocupa el espacio restante */
-}
-
-.logo-img {
-  max-height: 150px; /* Ajusta el tamaño del logo según sea necesario */
 }
 
 .right-menu {
@@ -52,8 +52,8 @@
 }
 
 .navbar {
-  background-color: #a3a2a1; /* Color ligeramente diferente para el menú de navegación */
-  flex: 1; /* Asegura que el navbar tome el espacio restante */
+  background-color: #f0ecea !important; 
+  flex: 1; 
 }
 
 .navbar-nav {
@@ -63,10 +63,12 @@
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #fff;
+  color: #000000 !important;
   font-weight: bold;
   margin-right: 15px;
+  font-family: 'Roboto', sans-serif !important; /* Aplica la fuente Roboto */
 }
+
 
 .navbar-nav .nav-item .nav-link:hover {
   color: #fff; /* Mantén el color blanco en el hover */
