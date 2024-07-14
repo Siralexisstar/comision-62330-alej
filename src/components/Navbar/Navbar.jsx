@@ -18,7 +18,7 @@ const Navbar = ({ categorias, title }) => {
           <div className="logo-container">
             <LogoImg />
           </div>
-          <div className="right-menu">
+          <div className="right-menu custom-color">
             <CartWidget />
             <span>Identifícate</span>
             <span>ES</span>
