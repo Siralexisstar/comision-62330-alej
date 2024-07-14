@@ -5,6 +5,7 @@ import "./Navbar.css";
 import LogoImg from "../Logo/LogoImg";
 import Search from "../Search/Search";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import ExpandItem from "../ExpandItem/ExpandItem";
 
 const Navbar = ({ categorias, title }) => {
   console.log(categorias);
@@ -48,9 +49,6 @@ const Navbar = ({ categorias, title }) => {
               </div>
             </div>
           </nav>
-          {/* <div>
-            <Search />
-          </div> */}
         </div>
       </header>
     </>

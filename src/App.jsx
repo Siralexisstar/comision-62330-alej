@@ -5,6 +5,7 @@ import ButtonLink from "./components/Button/ButtonLink";
 import ItemListContainer from "./components/ItemListContainer/ItemListCointainer";
 import ItemCount from "./components/ItemCount/ItemCount";
 import { title, categorias } from "./components/mock/MockData";
+import { ExpandItem } from "./components/ExpandItem/ExpandItem";
 
 function App() {
   const subTitle = "Texto subtitulo";
