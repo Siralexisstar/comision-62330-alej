@@ -5,7 +5,7 @@ import ButtonLink from "./components/Button/ButtonLink";
 import ItemListContainer from "./components/ItemListContainer/ItemListCointainer";
 import ItemCount from "./components/ItemCount/ItemCount";
 import { title, categorias } from "./components/mock/MockData";
-import { ExpandItem } from "./components/ExpandItem/ExpandItem";
+import ProductList from "./components/ProductList/ProductList";
 
 function App() {
   const subTitle = "Texto subtitulo";
@@ -13,7 +13,10 @@ function App() {
   return (
     <>
       <Navbar categorias={categorias} title={title} />
-      <ItemListContainer />
+      {/* <ItemListContainer /> */}
+      <div>
+        <ProductList />
+      </div>
       <div>
         <ButtonLink href="https://www.youtube.com/watch?v=MjLS5Zri7IM">
           Candle Making video 1

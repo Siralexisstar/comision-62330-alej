@@ -12,7 +12,7 @@ export const products = [
     price: 25,
     stock: 20,
     category: ["Relaxing"],
-    image: "https://example.com/images/lavender_bliss.jpg",
+    image: "src/assets/images/pruebaImg.jpeg",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const products = [
     price: 30,
     stock: 15,
     category: ["Energizing"],
-    image: "https://example.com/images/citrus_sunrise.jpg",
+    image: "src/assets/images/pruebaImg.jpeg",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const products = [
     price: 28,
     stock: 25,
     category: ["Comforting"],
-    image: "https://example.com/images/vanilla_dream.jpg",
+    image: "src/assets/images/pruebaImg.jpeg",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const products = [
     price: 35,
     stock: 10,
     category: ["Grounding"],
-    image: "https://example.com/images/forest_retreat.jpg",
+    image: "src/assets/images/pruebaImg.jpeg",
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ export const products = [
     price: 40,
     stock: 18,
     category: ["Romantic"],
-    image: "https://example.com/images/rose_garden.jpg",
+    image: "src/assets/images/pruebaImg.jpeg",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const products = [
     price: 32,
     stock: 22,
     category: ["Refreshing"],
-    image: "https://example.com/images/ocean_breeze.jpg",
+    image: "src/assets/images/pruebaImg.jpeg",
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ export const products = [
     price: 27,
     stock: 12,
     category: ["Festive"],
-    image: "https://example.com/images/spiced_cinnamon.jpg",
+    image: "src/assets/images/pruebaImg.jpeg",
   },
   {
     id: 8,
@@ -75,6 +75,6 @@ export const products = [
     price: 29,
     stock: 17,
     category: ["Calming"],
-    image: "https://example.com/images/jasmine_serenity.jpg",
+    image: "src/assets/images/pruebaImg.jpeg",
   }
 ];
