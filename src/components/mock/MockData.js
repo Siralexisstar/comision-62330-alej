@@ -12,7 +12,7 @@ export const products = [
     price: 25,
     stock: 20,
     category: ["Relaxing"],
-    image: "src/assets/images/pruebaImg.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const products = [
     price: 30,
     stock: 15,
     category: ["Energizing"],
-    image: "src/assets/images/pruebaImg.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const products = [
     price: 28,
     stock: 25,
     category: ["Comforting"],
-    image: "src/assets/images/pruebaImg.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const products = [
     price: 35,
     stock: 10,
     category: ["Grounding"],
-    image: "src/assets/images/pruebaImg.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ export const products = [
     price: 40,
     stock: 18,
     category: ["Romantic"],
-    image: "src/assets/images/pruebaImg.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const products = [
     price: 32,
     stock: 22,
     category: ["Refreshing"],
-    image: "src/assets/images/pruebaImg.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ export const products = [
     price: 27,
     stock: 12,
     category: ["Festive"],
-    image: "src/assets/images/pruebaImg.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
     id: 8,
@@ -75,6 +75,6 @@ export const products = [
     price: 29,
     stock: 17,
     category: ["Calming"],
-    image: "src/assets/images/pruebaImg.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   }
 ];
