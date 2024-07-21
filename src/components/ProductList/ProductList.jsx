@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { products } from "../../components/mock/MockData";
 import "./ProductList.css";
 
-const ProductList = () => {
+const ProductList = ({products}) => {
   // Crear un estado para rastrear el índice del producto que tiene el mouse encima
   const [hoveredProduct, setHoveredProduct] = useState(null);
 

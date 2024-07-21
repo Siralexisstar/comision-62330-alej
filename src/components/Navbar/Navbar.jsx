@@ -3,9 +3,14 @@ import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.css";
 import LogoImg from "../Logo/LogoImg";
 import ExpandItem from "../ExpandItem/ExpandItem";
+import { LoginButton } from "../LoginPage/LoginPage";
+import { LogoutButton } from "../Logout.jsx/Logout";
+import { Profile } from "../LoginPage/Profile";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = ({ categorias, title }) => {
-  console.log(categorias);
+  const { isAuthenticated } = useAuth0();
+
   return (
     <>
       <header className="header">
@@ -41,7 +46,14 @@ const Navbar = ({ categorias, title }) => {
           </div>
           <div className="right-menu custom-color">
             <CartWidget />
-            <span>Identifícate</span>
+            {isAuthenticated ? (
+              <>
+                <Profile />
+                <LogoutButton />
+              </>
+            ) : (
+              <LoginButton />
+            )}
             <span>ES</span>
           </div>
         </div>
