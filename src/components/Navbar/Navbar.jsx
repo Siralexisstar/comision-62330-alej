@@ -1,10 +1,7 @@
 import React from "react";
-import { menu } from "../../components/mock/MockData";
 import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.css";
 import LogoImg from "../Logo/LogoImg";
-import Search from "../Search/Search";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import ExpandItem from "../ExpandItem/ExpandItem";
 
 const Navbar = ({ categorias, title }) => {

@@ -40,18 +40,18 @@
 }
 
 .social-icon-facebook:hover {
-  color: #0033ff; /* Cambia al color que prefieras */
-  transform: scale(1.2); /* Agranda el ícono al pasar el ratón por encima */
+  color: #0033ff;
+  transform: scale(1.2);
 }
 
 .social-icon-youtube:hover {
-  color: #ee0a0a; /* Cambia al color que prefieras */
-  transform: scale(1.2); /* Agranda el ícono al pasar el ratón por encima */
+  color: #ee0a0a;
+  transform: scale(1.2);
 }
 
 .social-icon-instagram:hover {
-  color: #f60a78; /* Cambia al color que prefieras */
-  transform: scale(1.2); /* Agranda el ícono al pasar el ratón por encima */
+  color: #f60a78;
+  transform: scale(1.2);
 }
 
 .right-menu {
@@ -92,13 +92,13 @@
   color: #ffffff !important;
   font-weight: bold;
   margin-right: 15px;
-  font-family: 'Roboto', sans-serif !important; /* Aplica la fuente Roboto */
+  font-family: 'Roboto', sans-serif !important;
 }
 
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #fff; /* Mantén el color blanco en el hover */
-  text-decoration: underline; /* Añade subrayado en el hover */
+  color: #fff;
+  text-decoration: underline;
 }
 
 .btn-custom-gray {

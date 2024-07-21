@@ -1,5 +1,5 @@
 import React from "react";
-import "./Search.css"; // Asegúrate de importar el archivo CSS
+import "./Search.css";
 
 const Search = () => {
   return (
@@ -12,7 +12,10 @@ const Search = () => {
             placeholder="Search"
             aria-label="Search"
           />
-          <button className="btn btn-outline-success search-button" type="submit">
+          <button
+            className="btn btn-outline-success search-button"
+            type="submit"
+          >
             Search
           </button>
         </form>
@@ -22,4 +25,3 @@ const Search = () => {
 };
 
 export default Search;
-
