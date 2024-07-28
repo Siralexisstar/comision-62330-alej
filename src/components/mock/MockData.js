@@ -11,7 +11,7 @@ export const products = [
     description: "A soothing lavender scent that helps you relax and unwind after a long day.",
     price: 25,
     stock: 20,
-    category: ["Relaxing"],
+    category: ["aromatic-candles"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
@@ -20,7 +20,7 @@ export const products = [
     description: "A refreshing blend of citrus fruits that invigorates your senses and uplifts your mood.",
     price: 30,
     stock: 15,
-    category: ["Energizing"],
+    category: ["aromatic-candles"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
@@ -29,7 +29,7 @@ export const products = [
     description: "A warm and inviting vanilla scent that creates a cozy atmosphere in any room.",
     price: 28,
     stock: 25,
-    category: ["Comforting"],
+    category: ["aromatic-candles"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
@@ -38,7 +38,7 @@ export const products = [
     description: "An earthy blend of pine and cedarwood that brings the tranquility of the forest into your home.",
     price: 35,
     stock: 10,
-    category: ["Grounding"],
+    category: ["aromatic-candles"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
@@ -47,7 +47,7 @@ export const products = [
     description: "A romantic rose scent that fills the air with the fragrance of blooming flowers.",
     price: 40,
     stock: 18,
-    category: ["Romantic"],
+    category: ["non-aromatic-candles"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
@@ -56,7 +56,7 @@ export const products = [
     description: "A crisp and clean scent that captures the essence of the sea breeze on a sunny day.",
     price: 32,
     stock: 22,
-    category: ["Refreshing"],
+    category: ["aromatic-candles"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
@@ -65,7 +65,7 @@ export const products = [
     description: "A warm and spicy cinnamon scent that adds a touch of festive cheer to your home.",
     price: 27,
     stock: 12,
-    category: ["Festive"],
+    category: ["non-aromatic-candles"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   },
   {
@@ -74,7 +74,7 @@ export const products = [
     description: "A delicate jasmine fragrance that soothes the mind and promotes a sense of peace.",
     price: 29,
     stock: 17,
-    category: ["Calming"],
+    category: ["non-aromatic-candles"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kLg_gAf2CWAyD7-ELjdBhKNT0PkYm7STnQ&s",
   }
 ];

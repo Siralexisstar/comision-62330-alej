@@ -1,32 +1,24 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import LoginButton from "./components/LoginPage/LoginPage";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AromaticCandles from "./components/CandlesCategories/AromaticCandles";
+import NonAromaticCandles from "./components/CandlesCategories/NonAromaticCandles";
 import Navbar from "./components/Navbar/Navbar";
-import ButtonLink from "./components/Button/ButtonLink";
 import ItemListContainer from "./components/ItemListContainer/ItemListCointainer";
-import ItemCount from "./components/ItemCount/ItemCount";
 import { title, categorias } from "./components/mock/MockData";
-import ProductList from "./components/ProductList/ProductList";
 
 function App() {
-  const subTitle = "Texto subtitulo";
-
   return (
-    <>
+    <Router>
       <Navbar categorias={categorias} title={title} />
-      {/* <ItemListContainer /> */}
       <div>
-        <ItemListContainer />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/aromatic-candles" element={<AromaticCandles />} />
+          <Route path="/non-aromatic-candles" element={<NonAromaticCandles />} />
+        </Routes>
       </div>
-      <div>
-        <ButtonLink href="https://www.youtube.com/watch?v=MjLS5Zri7IM">
-          Candle Making video 1
-        </ButtonLink>
-        <ButtonLink href="https://www.youtube.com/watch?v=SEiLNPbSBbc">
-          Candle Making video 2
-        </ButtonLink>
-      </div>
-    </>
+    </Router>
   );
 }
 

@@ -2,23 +2,22 @@ import React, { useEffect, useState } from "react";
 import ProductList from "../ProductList/ProductList";
 import { getProducts } from "../utils/fetchData";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ category }) => {
   const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    getProducts()
+    getProducts(category)
       .then((res) => {
         setProducts(res);
       })
       .catch((err) => {
-        console.log(err);
+        setError(err);
       });
-  }, []);
+  }, [category]);
 
   return (
-    <div>
-      <ProductList products={products} />
-    </div>
+    <div>{error ? <p> {error} </p> : <ProductList products={products} />}</div>
   );
 };
 

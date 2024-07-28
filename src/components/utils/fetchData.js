@@ -1,11 +1,15 @@
 import { products } from "../../components/mock/MockData";
 
-export const getProducts = () => {
+export const getProducts = (category) => {
   return new Promise((resolve, reject) => {
-    if (products.length > 0) {
-      resolve(products);
+    const filteredProducts = category
+      ? products.filter((product) => product.category.includes(category))
+      : products;
+
+    if (filteredProducts.length > 0) {
+      resolve(filteredProducts);
     } else {
-      reject("No hay productos");
+      reject("No hay productos para mostrar");
     }
   });
 };

@@ -1,3 +1,6 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 export const ExpandItem = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -16,9 +19,9 @@ export const ExpandItem = () => {
         <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/">
                 INICIO
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -32,26 +35,26 @@ export const ExpandItem = () => {
               </a>
               <ul className="dropdown-menu dropdown-menu-dark">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/aromatic-candles">
                     VELAS AROMATICAS
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/non-aromatic-candles">
                     VELAS SIN AROMA
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/quienes-somos">
                 QUIENES SOMOS
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/contacto">
                 CONTACTO
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
