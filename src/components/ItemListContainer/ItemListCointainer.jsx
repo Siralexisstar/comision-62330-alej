@@ -56,10 +56,10 @@ const ItemListContainer = ({ category }) => {
         <a
           href="#!"
           onClick={() => setFiltersVisible(!filterVisible)}
-          className="text-decoration-underline fw-bold"
+          className="text-decoration fw-bold"
           style={{ cursor: "pointer" }}
         >
-          {filterVisible ? "Ocultar filtros" : "Mostrar filtros"}
+          {filterVisible ? "Filtrar" : "Filtrar"}
         </a>
       </div>
 

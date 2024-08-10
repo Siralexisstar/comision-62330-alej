@@ -18,6 +18,20 @@
   padding: 10px 0;
 }
 
+.brown-banner {
+  background-image: url('src/assets/images/woodImage.jpg'); /* Ruta a tu imagen de textura de madera */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.banner-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase; /* Opcional: para texto en mayúsculas */
+}
+
+
 .logo-container {
   display: flex;
   align-items: center;

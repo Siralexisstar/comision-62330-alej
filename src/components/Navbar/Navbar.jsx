@@ -14,6 +14,13 @@ const Navbar = ({ categorias, title }) => {
   return (
     <>
       <header className="header">
+        <div className="brown-banner">
+          <div className="container text-center py-3">
+            <span className="banner-text">
+              Ingredientes Premium • Hecho a mano • Sostenible
+            </span>
+          </div>
+        </div>
         <div className="top-bar">
           <div className="social-icons">
             <a
