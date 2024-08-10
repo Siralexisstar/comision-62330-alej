@@ -33,12 +33,12 @@ const Navbar = ({ categorias, title }) => {
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
-              href="https://www.youtube.com"
+              href="https://www.twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="social-icon social-icon-youtube"
+              className="social-icon social-icon-twitter"
             >
-              <i className="fab fa-youtube"></i>
+              <i className="fab fa-twitter"></i>
             </a>
           </div>
           <div className="logo-container">

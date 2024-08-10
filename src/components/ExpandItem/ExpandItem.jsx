@@ -36,12 +36,32 @@ export const ExpandItem = () => {
               <ul className="dropdown-menu dropdown-menu-dark">
                 <li>
                   <Link className="dropdown-item" to="/aromatic-candles">
-                    VELAS AROMATICAS
+                    VELAS FLORALES
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/non-aromatic-candles">
-                    VELAS SIN AROMA
+                    VELAS FRUTALES
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/non-aromatic-candles">
+                    VELAS EN RECIPIENTES
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/non-aromatic-candles">
+                    VELAS HALLOWEEN
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/non-aromatic-candles">
+                    VELAS NAVIDAD
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/non-aromatic-candles">
+                    RECUERDOS, BODAS, BAUTIZOS Y COMUNIONES
                   </Link>
                 </li>
               </ul>

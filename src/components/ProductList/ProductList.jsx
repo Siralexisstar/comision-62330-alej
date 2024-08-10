@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { products } from "../../components/mock/MockData";
 import "./ProductList.css";
 
-const ProductList = ({products}) => {
-  // Crear un estado para rastrear el índice del producto que tiene el mouse encima
+const ProductList = ({ products, viewMode, perRow }) => {
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
   return (
     <div className="container my-5">
-      {/* <h2 className="text-center mb-4">VER COLECCIÓN</h2> */}
-      <div className="row">
+      <div
+        className={`row ${
+          viewMode === "grid"
+            ? `row-cols-1 row-cols-md-${perRow}`
+            : "d-flex flex-column"
+        }`}
+      >
         {products.map((product, index) => (
-          <div key={product.id} className="col-md-3 col-sm-6 mb-4">
+          <div key={product.id} className="col mb-4">
             <div className="card h-100 shadow-sm">
               <div className="position-relative">
                 <img
