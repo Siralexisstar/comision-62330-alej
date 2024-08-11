@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const ExpandItem = () => {
   return (
@@ -33,7 +33,7 @@ export const ExpandItem = () => {
               >
                 TIENDA
               </a>
-              <ul className="dropdown-menu dropdown-menu-dark">
+              <ul className="dropdown-menu dropdown-menu-white">
                 <li>
                   <Link className="dropdown-item" to="/aromatic-candles">
                     VELAS FLORALES

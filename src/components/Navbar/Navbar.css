@@ -18,10 +18,37 @@
   padding: 10px 0;
 }
 
+/* Estilo para cambiar el color de las letras del menú desplegable a gris */
+.dropdown-menu .dropdown-item {
+  color: #808080 !important; /* Gris */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: #c17a4c !important; /* Cambia a naranja al pasar el ratón */
+  background-color: white; /* Mantener fondo transparente */
+  text-decoration: none; /* Eliminar subrayado si no lo deseas */
+}
+
+
+/* Hacer que el menú desplegable se muestre al pasar el ratón */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-item.dropdown-toggle::after {
+  display: none !important; /* Para eliminar la flecha */
+}
+
+/* Asegurar que el menú no se cierre al mover el ratón dentro del dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  transition: display 0.3s ease-in-out;
+}
+
 .brown-banner {
-  background-image: url('src/assets/images/woodImage.jpg'); /* Ruta a tu imagen de textura de madera */
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #DEB887; /* Color marrón */
   color: white;
 }
 
@@ -63,8 +90,8 @@
   transform: scale(1.2);
 }
 
-.social-icon-instagram:hover {
-  color: #f60a78;
+.social-icon-twitter:hover {
+  color: #0798ff;
   transform: scale(1.2);
 }
 
@@ -92,8 +119,10 @@
 }
 
 .navbar {
-  background-color: #000000 !important; 
-  flex: 1; 
+  background-color: transparent !important; 
+  flex: 1;
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
 }
 
 .navbar-nav {
@@ -103,7 +132,7 @@
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #ffffff !important;
+  color: #000000 !important;
   font-weight: bold;
   margin-right: 15px;
   font-family: 'Roboto', sans-serif !important;
@@ -111,8 +140,9 @@
 
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #fff;
+  color: #808080 !important; /* Gris al pasar el ratón */
   text-decoration: underline;
+  text-decoration-color: #ff6600; /* Subrayado en color naranja */
 }
 
 .btn-custom-gray {
