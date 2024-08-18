@@ -7,8 +7,6 @@ const ProductFilter = ({
   setItemsPerPage,
   order,
   setOrder,
-  viewMode,
-  setViewMode,
   perRow,
   setPerRow,
 }) => {

@@ -1,0 +1,21 @@
+.item-count {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .item-count .btn-outline-secondary {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    color: #343a40;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .item-count .btn-outline-secondary:hover {
+    background-color: #343a40;
+    color: #f8f9fa;
+  }
+  
+  .item-count span {
+    min-width: 2rem;
+    text-align: center;
+  }
+  

@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ProductList.css";
+import ItemCount from "../ItemCount/ItemCount";
+import { useCartContext } from "../context/CartContext";
 
 const ProductList = ({ products, viewMode, perRow }) => {
-  const [hoveredProduct, setHoveredProduct] = useState(null);
+  const { addToCart, removeItem } = useCartContext();
+  const handleOnBuy = (product, quantity) => {
+    console.log(
+      `Se agregaron ${quantity} productos de ${product.name} al carrito`
+    );
+
+    //Cada vez que alguien clique en el carrito, se actualiza la cantidad de items
+    addToCart(product, quantity);
+  };
+
+  const handleOnRemove = (product, quantity) => {
+    console.log(
+      `Se removieron ${quantity} productos de ${product.name} del carrito`
+    );
+    removeItem(product, quantity);
+  };
 
   return (
     <div className="container my-5">
@@ -14,7 +31,7 @@ const ProductList = ({ products, viewMode, perRow }) => {
             : "d-flex flex-column"
         }`}
       >
-        {products.map((product, index) => (
+        {products.map((product) => (
           <div key={product.id} className="col mb-4">
             <div className="card h-100 shadow-sm">
               <div className="position-relative">
@@ -34,23 +51,14 @@ const ProductList = ({ products, viewMode, perRow }) => {
                 <p className="card-text">
                   <strong>{product.price}€ IVA incluido</strong>
                 </p>
-                <button
-                  className="btn btn-primary mt-2 position-relative"
-                  onMouseEnter={() => setHoveredProduct(index)}
-                  onMouseLeave={() => setHoveredProduct(null)}
-                >
-                  {hoveredProduct === index ? (
-                    <i
-                      className="fas fa-shopping-cart"
-                      style={{
-                        fontSize: "1.5rem",
-                        color: "#fff",
-                      }}
-                    ></i>
-                  ) : (
-                    "AÑADIR CARRITO"
-                  )}
-                </button>
+                <ItemCount
+                  stock={product.stock}
+                  initial={1}
+                  handleOnBuy={(quantity) => handleOnBuy(product, quantity)}
+                  handleOnRemove={(quantity) =>
+                    handleOnRemove(product, quantity)
+                  }
+                />
               </div>
             </div>
           </div>
