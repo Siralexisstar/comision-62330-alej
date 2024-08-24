@@ -1,0 +1,13 @@
+/* styles.css o dentro de tu archivo CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Opcional: Puedes aplicar diferentes pesos para títulos y texto */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Negrita */
+  }
+  
+  p, span, div {
+    font-weight: 400; /* Regular */
+  }

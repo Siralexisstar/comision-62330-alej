@@ -49,7 +49,7 @@ export const ExpandItem = () => {
                     VELAS EN RECIPIENTES
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link className="dropdown-item" to="/non-aromatic-candles">
                     VELAS HALLOWEEN
                   </Link>
@@ -58,7 +58,7 @@ export const ExpandItem = () => {
                   <Link className="dropdown-item" to="/non-aromatic-candles">
                     VELAS NAVIDAD
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link className="dropdown-item" to="/non-aromatic-candles">
                     RECUERDOS, BODAS, BAUTIZOS Y COMUNIONES
@@ -74,6 +74,11 @@ export const ExpandItem = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/contacto">
                 CONTACTO
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/cart">
+                CARRITO
               </Link>
             </li>
           </ul>

@@ -5,11 +5,14 @@ import {
   AromaticCandles,
   NonAromaticCandles,
   Contacto,
+  QuienesSomos,
 } from "./components/CandlesCategories";
 import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListCointainer";
 import { title, categorias } from "./components/mock/MockData";
 import CartContextProvider from "./components/context/CartContext";
+import Cart from "./components/Cart/Cart";
+
 
 function App() {
   return (
@@ -25,6 +28,8 @@ function App() {
               element={<NonAromaticCandles />}
             />
             <Route path="/contacto" element={<Contacto />} />
+            <Route path="/quienes-somos" element={<QuienesSomos />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       </Router>

@@ -91,9 +91,11 @@ const CartContextProvider = ({ children }) => {
   
   //Exponemos los componentes
   const contextValue = {
+    cart,
     qtyItems: qtyItems,
     addToCart,
     removeItem,
+    total,
   };
 
   /**Nos devuelve el provider que es el contexto general*/

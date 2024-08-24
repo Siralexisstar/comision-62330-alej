@@ -1,10 +1,14 @@
 import { useState } from "react";
 import "./ItemCount.css";
 import { FiMinus, FiPlus } from "react-icons/fi"; // Íconos minimalistas
+import { useNavigate } from "react-router-dom";
 
 const ItemCount = ({ stock, initial, handleOnBuy, handleOnRemove }) => {
+  const navigate = useNavigate();
   const [qty, setQty] = useState(initial);
   const [hovered, setHovered] = useState(false);
+  const [itemAdded, setItemAdded] = useState(false);
+
 
   const handleClick = (op) => {
     op === "+" ? handleClickMas() : handleClickMenos();
@@ -29,7 +33,13 @@ const ItemCount = ({ stock, initial, handleOnBuy, handleOnRemove }) => {
   //le pasamos el qty que es la cantidad que se ha seleccionado en el evento
   const handleAddToCart = () => {
     handleOnBuy(qty);
+    setItemAdded(true);
     // handleOnRemove(qty);
+  };
+
+  const handleGoToCheckout = () => {
+    setItemAdded(false);
+    navigate("/cart");
   };
 
   return (
@@ -80,7 +90,33 @@ const ItemCount = ({ stock, initial, handleOnBuy, handleOnRemove }) => {
           </button>
         </div>
       </div>
-      <div>
+      
+      {itemAdded ? (
+        <div>
+        <button
+          className="btn btn-primary mt-2 position-relative"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          onClick={handleGoToCheckout}
+          style={{ width: "100%" }}
+        >
+          {hovered ? (
+            <i
+              className="fas fa-shopping-cart"
+              style={{
+                fontSize: "1.5rem",
+                color: "#fff",
+              }}
+            ></i>
+          ) : (
+            "CHEKOUT"
+          )}
+        </button>
+      </div>
+
+      ) : (
+
+        <div>
         <button
           className="btn btn-primary mt-2 position-relative"
           onMouseEnter={() => setHovered(true)}
@@ -101,6 +137,7 @@ const ItemCount = ({ stock, initial, handleOnBuy, handleOnRemove }) => {
           )}
         </button>
       </div>
+      )}
     </>
   );
 };
