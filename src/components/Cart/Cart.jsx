@@ -40,8 +40,7 @@ const Cart = () => {
               </Button>
             </Col>
           </Row>
-          <div className="text-center mt-4">
-            <h3>Total del carrito: {total}€</h3>
+           <div className="text-center mt-4">
             <Button
               variant="danger"
               size="lg"
