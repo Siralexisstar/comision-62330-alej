@@ -42,6 +42,12 @@ const CartContextProvider = ({ children }) => {
   };
 
   const addToCart = (item, qty) => {
+    if (qty <= 0) {
+      console.warn("la cantidad es nula o ninguna");
+      return;
+    }
+
+    //Añadimos la cantidad
     setQtyItems(qtyItems + qty);
     setTotal(total + item.price * qty);
     let newCart = [];
@@ -67,7 +73,7 @@ const CartContextProvider = ({ children }) => {
 
   const removeItem = (item, qty) => {
     let newCart;
-  
+
     if (isInCart(item.id)) {
       newCart = cart
         .map((elem) => {
@@ -79,21 +85,28 @@ const CartContextProvider = ({ children }) => {
           }
         })
         .filter(Boolean); // Elimina elementos con cantidad 0
-  
+
       setCart(newCart);
-  
+
       const adjustedQty = qty > item.qty ? item.qty : qty;
-  
+
       setQtyItems(qtyItems - adjustedQty);
       setTotal(total - item.price * adjustedQty);
     }
   };
-  
+
+  const clearCart = () => {
+    setCart([]);
+    setTotal(0);
+    setQtyItems(0);
+  };
+
   //Exponemos los componentes
   const contextValue = {
     cart,
     qtyItems: qtyItems,
     addToCart,
+    clearCart,
     removeItem,
     total,
   };

@@ -9,7 +9,6 @@ const ItemCount = ({ stock, initial, handleOnBuy, handleOnRemove }) => {
   const [hovered, setHovered] = useState(false);
   const [itemAdded, setItemAdded] = useState(false);
 
-
   const handleClick = (op) => {
     op === "+" ? handleClickMas() : handleClickMenos();
   };
@@ -32,9 +31,10 @@ const ItemCount = ({ stock, initial, handleOnBuy, handleOnRemove }) => {
   //Añadimos la cantidad a la compra
   //le pasamos el qty que es la cantidad que se ha seleccionado en el evento
   const handleAddToCart = () => {
-    handleOnBuy(qty);
-    setItemAdded(true);
-    // handleOnRemove(qty);
+    if (qty > 0) {
+      handleOnBuy(qty);
+      setItemAdded(true);
+    }
   };
 
   const handleGoToCheckout = () => {
@@ -90,53 +90,51 @@ const ItemCount = ({ stock, initial, handleOnBuy, handleOnRemove }) => {
           </button>
         </div>
       </div>
-      
+
       {itemAdded ? (
         <div>
-        <button
-          className="btn btn-primary mt-2 position-relative"
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          onClick={handleGoToCheckout}
-          style={{ width: "100%" }}
-        >
-          {hovered ? (
-            <i
-              className="fas fa-shopping-cart"
-              style={{
-                fontSize: "1.5rem",
-                color: "#fff",
-              }}
-            ></i>
-          ) : (
-            "CHEKOUT"
-          )}
-        </button>
-      </div>
-
+          <button
+            className="btn btn-primary mt-2 position-relative"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={handleGoToCheckout}
+            style={{ width: "100%" }}
+          >
+            {hovered ? (
+              <i
+                className="fas fa-shopping-cart"
+                style={{
+                  fontSize: "1.5rem",
+                  color: "#fff",
+                }}
+              ></i>
+            ) : (
+              "CHEKOUT"
+            )}
+          </button>
+        </div>
       ) : (
-
         <div>
-        <button
-          className="btn btn-primary mt-2 position-relative"
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          onClick={handleAddToCart}
-          style={{ width: "100%" }}
-        >
-          {hovered ? (
-            <i
-              className="fas fa-shopping-cart"
-              style={{
-                fontSize: "1.5rem",
-                color: "#fff",
-              }}
-            ></i>
-          ) : (
-            "AÑADIR CARRITO"
-          )}
-        </button>
-      </div>
+          <button
+            className="btn btn-primary mt-2 position-relative"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={handleAddToCart}
+            style={{ width: "100%" }}
+          >
+            {hovered ? (
+              <i
+                className="fas fa-shopping-cart"
+                style={{
+                  fontSize: "1.5rem",
+                  color: "#fff",
+                }}
+              ></i>
+            ) : (
+              "AÑADIR CARRITO"
+            )}
+          </button>
+        </div>
       )}
     </>
   );
