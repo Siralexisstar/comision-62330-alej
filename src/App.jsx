@@ -12,6 +12,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListCointainer
 import { title, categorias } from "./components/mock/MockData";
 import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart/Cart";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
+        <Footer />
       </Router>
     </CartContextProvider>
   );

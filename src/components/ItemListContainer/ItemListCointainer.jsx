@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ProductList from "../ProductList/ProductList";
 import ProductFilter from "../Filters/ProductFilter";
-import { getProducts } from "../utils/fetchData";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { db } from "../../components/firebase/dbConnection";
+import { collection, doc, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = ({ category }) => {
   const [products, setProducts] = useState([]);
@@ -15,11 +16,35 @@ const ItemListContainer = ({ category }) => {
   const [filterVisible, setFiltersVisible] = useState(false);
 
   useEffect(() => {
+    console.log("Category prop received:", category); 
+    setLoading(true);
     const fetchProducts = async () => {
+
       try {
-        const productList = await getProducts(category);
+        //productsCollections tiene todos los productos de la base de datos
+        const productsCollection = collection(db, "products");
+
+        //Construimos la consulta
+        let q;
+        if (category) {
+          q = query(productsCollection, where("category", "array-contains", category));
+          console.log("Firebase query with category:", q);
+        } else {
+          q = query(productsCollection); //Todos los productos
+          console.log("Firebase query without category:", q);
+
+        }
+
+        const querysnapshot = await getDocs(q);
+        const productList = querysnapshot.docs.map((doc) => ({
+          //Generamos un array de objetos de los productos
+          id: doc.id,
+          ...doc.data(), //del documento obtené la data
+        }));
+
         let sortedProducts = [...productList];
 
+        //Ordenar productos
         if (order === "price-desc") {
           sortedProducts.sort((a, b) => b.price - a.price);
         } else if (order === "price-asc") {
@@ -33,7 +58,7 @@ const ItemListContainer = ({ category }) => {
         setProducts(sortedProducts);
       } catch (error) {
         console.error("Error fetching products:", error);
-        setError(error);
+        setError(error.message);
       } finally {
         setLoading(false);
       }
@@ -43,7 +68,13 @@ const ItemListContainer = ({ category }) => {
   }, [category, order, itemsPerPage, perRow]);
 
   if (loading) {
-    return <p>Cargando...</p>;
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
