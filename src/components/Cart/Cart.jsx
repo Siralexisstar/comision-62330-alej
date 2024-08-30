@@ -9,41 +9,39 @@ const Cart = () => {
   const [formData, setFormData] = useState({ name: "", email: "", tel: "" });
 
   const handleOnClear = () => {
-    console.log("Se limpio el carrito");
+    console.log("Se limpió el carrito");
     clearCart();
   };
 
-  /** Esta funcion se puede hacer generica para cualquier input */
   const handleOnChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  //Vamos a updatear el stock
   const updateStock = async () => {
     const updatePromises = cart.map(async (item) => {
-      const productRef = doc(db, "products", item.id); //referencia al documento del producto
-      const newStock = item.stock - item.qty; //Calculamos el nuevo stock
+      const productRef = doc(db, "products", item.id); // referencia al documento del producto
+      const newStock = item.stock - item.qty; // Calculamos el nuevo stock
 
-      if (new Stock() > 0) {
+      if (newStock < 0) {
         throw new Error(
-          `No hay stock suficiente de ${item.name}. Pronto dispondremos de ${newStock} en stock.`
+          `No hay stock suficiente de ${item.name}. Stock disponible: ${item.stock}.`
         );
       }
 
-      await updateDoc(productRef, { stock: newStock }); //Actualizamos el stock en la bbdd
+      await updateDoc(productRef, { stock: newStock }); // Actualizamos el stock en la base de datos
     });
 
-    await Promise.all(updatePromises); //Esperamos a que todos los updates se hayan terminado
+    await Promise.all(updatePromises); // Esperamos a que todas las actualizaciones se completen
   };
 
   const handleSaveCart = async () => {
-    //Verificamos que el formulario este completo
+    // Verificamos que el formulario esté completo
     if (!formData.name || !formData.email || !formData.tel) {
-      alert("Por favor complete todos los campos");
+      alert("Por favor, complete todos los campos.");
       return;
     }
 
-    //Verificamos que el stock este disponible
+    // Verificamos que haya suficiente stock disponible para cada producto
     for (let item of cart) {
       if (item.qty > item.stock) {
         alert(`No hay stock suficiente de ${item.name}`);
@@ -60,14 +58,15 @@ const Cart = () => {
     };
 
     try {
-      //Añadimos la orden a la bbdd de firebase
+      // Añadimos la orden a la base de datos de Firebase
       const docRef = await addDoc(orderCollection, newOrder);
-      alert(`Numero identificador del pedido: ${doc.id}`);
-      //Actualizamos stock
-      updateStock();
-      //Limpiamos el carrito
+      alert(`Número identificador del pedido: ${docRef.id}`);
+
+      // Actualizamos el stock
+      await updateStock();
+
+      // Limpiamos el carrito y el formulario
       clearCart();
-      //Limpiamos el formulario
       setFormData({ name: "", email: "", tel: "" });
     } catch (error) {
       console.error("Error al procesar el pedido:", error);
@@ -77,7 +76,7 @@ const Cart = () => {
 
   return (
     <Container className="my-5" style={{ fontFamily: "'Poppins', sans-serif" }}>
-      <h2 className="text-center mb-4">Carrito : </h2>
+      <h2 className="text-center mb-4">Carrito :</h2>
       {cart.length === 0 ? (
         <p className="text-center">Tu carrito está vacío</p>
       ) : (
@@ -111,7 +110,6 @@ const Cart = () => {
                 Limpiar Carrito
               </Button>
             </Col>
-            {/** Esto es para el formulario del carrito */}
             <div className="mt-3">
               <input
                 className="form-control mb-2 text-center"
@@ -143,9 +141,7 @@ const Cart = () => {
             </div>
             <Col xs={12} className="text-center mt-4">
               <Button
-                onClick={() => {
-                  handleSaveCart();
-                }}
+                onClick={handleSaveCart}
                 variant="primary"
                 size="lg"
                 className="mt-3"
